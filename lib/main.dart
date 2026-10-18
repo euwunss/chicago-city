@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'landmarks_tab.dart';
+import 'food_tab.dart';
+import 'sports_tab.dart';
 
 void main() {
   runApp(const ChicagoCityApp());
@@ -39,7 +42,7 @@ class ChicagoCityApp extends StatelessWidget {
                 ),
                 Tab(
                   icon: Icon(Icons.restaurant),
-                  text: 'Restaurants',
+                  text: 'Food',
                 ),
                 Tab(
                   icon: Icon(Icons.sports_basketball),
@@ -52,15 +55,9 @@ class ChicagoCityApp extends StatelessWidget {
 
           body: const TabBarView(
             children: [
-              Center(
-                child: Text('Chicago Landmarks'),
-              ),
-              Center(
-                child: Text('Chicago Restaurants'),
-              ),
-              Center(
-                child: Text('Chicago Sports'),
-              ),
+              LandmarksTab(),
+              FoodTab(),
+              SportsTab(),
             ],
           ), 
         ),
